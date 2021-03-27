@@ -24,6 +24,14 @@ dependencies {
     implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
     implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
     implementation group: 'org.hibernate', name: 'hibernate-validator', version: '7.0.1.Final'
+    implementation group: 'org.springframework.security', name: 'spring-security-core', version: '5.4.5'
+    implementation group: 'org.springframework.security', name: 'spring-security-taglibs', version: '5.4.5'
+    implementation group: 'org.springframework.security', name: 'spring-security-config', version: '5.4.5'
+//    implementation group: 'org.freemarker', name: 'freemarker', version: '2.3.28'
+//    implementation group: 'org.springframework', name: 'spring-context-support', version: '5.3.4'
+    compile("kr.pe.kwonnam.freemarker:freemarker-template-inheritance:0.4.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-freemarker")
+
 
     testCompile ('junit:junit:4.12') {
         exclude group: 'org.hamcrest'
