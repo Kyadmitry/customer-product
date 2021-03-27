@@ -21,7 +21,7 @@ public class SignUpServiceImpl implements SignUpServiceInterface{
 
     /**
      * This method saves new user to database.
-     * When user input login "admin", this method creates
+     * When user inputs login "admin", this method creates
      * role ADMIN (just for comfortable testing). I other cases role will be USER.
      *
      **/
