@@ -19,6 +19,13 @@ public class SignUpServiceImpl implements SignUpServiceInterface{
     private PasswordEncoder passwordEncoder;
 
 
+    /**
+     * This method saves new user to database.
+     * When user input login "admin", this method creates
+     * role ADMIN (just for comfortable testing). I other cases role will be USER.
+     *
+     **/
+
     @Override
     public void signUp(UserForm userForm) {
         String hashPassword = passwordEncoder.encode(userForm.getPassword());
@@ -35,18 +42,4 @@ public class SignUpServiceImpl implements SignUpServiceInterface{
         userRepository.save(user);
     }
 
-//
-//    @PostConstruct
-//    private void createAdmin() {
-//        User user = User.builder()
-//                .state(State.ACTIVE)
-//                .role(Role.ADMIN)
-//                .login("admin")
-//                .hashPassword("$2y$12$xP/3Q1LVeSI1KEAheNnGfubBm/RQVKkTyzWQl9nqpYTu3RNXAIIky")
-//                .firstname("Admin")
-//                .lastname("Adminov")
-//                .build();
-//
-//        userRepository.save(user);
-//    }
 }
