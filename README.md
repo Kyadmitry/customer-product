@@ -11,6 +11,7 @@ It is a CRUD service with Postgres
 * JUnit/Mockito
 * Swagger
 * Postgresql
+* H2
 
 ### Required software:
 * Docker
