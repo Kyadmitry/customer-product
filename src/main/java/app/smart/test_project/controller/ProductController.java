@@ -1,6 +1,8 @@
 package app.smart.test_project.controller;
 
+import app.smart.test_project.mapper.ProductMapper;
 import app.smart.test_project.model.Product;
+import app.smart.test_project.model.dto.ProductDto;
 import app.smart.test_project.service.ProductService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.HttpStatus;
@@ -36,14 +38,22 @@ public class ProductController {
 
     @ApiOperation("To edit some fields of product by ID")
     @PatchMapping("/{productId}")
-    private ResponseEntity<Product> editProduct(@PathVariable UUID productId, @RequestBody Product product) {
-        return ResponseEntity.ok(productService.editProductById(productId, product));
+    private ResponseEntity<Product> editProduct(@PathVariable UUID productId,
+                                                @RequestBody ProductDto productDto) {
+        return ResponseEntity.ok(productService.editProductById(
+                productId, ProductMapper.fromProductDto(productDto)
+            )
+        );
     }
 
     @ApiOperation("To update a customer by ID")
     @PutMapping("/{productId}")
-    private ResponseEntity<Product> updateProduct(@PathVariable UUID productId, @Valid @RequestBody Product product) {
-        return ResponseEntity.ok(productService.updateProductById(productId, product));
+    private ResponseEntity<Product> updateProduct(@PathVariable UUID productId,
+                                                  @Valid @RequestBody ProductDto productDto) {
+        return ResponseEntity.ok(productService.updateProductById(
+                productId, ProductMapper.fromProductDto(productDto)
+            )
+        );
     }
 
 }

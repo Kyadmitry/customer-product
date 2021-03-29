@@ -17,7 +17,7 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @NotNull(message = "title field must not be null")
+    @Column(nullable = false)
     private String title;
 
     @Column(nullable = false)

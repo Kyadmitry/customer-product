@@ -60,11 +60,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .usernameParameter("login")
                 .defaultSuccessUrl("/")
                 .loginPage("/login")
-                .permitAll()
-                .and()
-                .rememberMe()
-                .rememberMeParameter("remember-me")
-                .tokenRepository(tokenRepository());
+                .permitAll();
         http.csrf().disable();
     }
 

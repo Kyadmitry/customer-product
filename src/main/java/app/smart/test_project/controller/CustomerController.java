@@ -1,7 +1,11 @@
 package app.smart.test_project.controller;
 
+import app.smart.test_project.mapper.CustomerMapper;
+import app.smart.test_project.mapper.ProductMapper;
 import app.smart.test_project.model.Customer;
 import app.smart.test_project.model.Product;
+import app.smart.test_project.model.dto.CustomerDto;
+import app.smart.test_project.model.dto.ProductDto;
 import app.smart.test_project.service.CustomerService;
 import app.smart.test_project.service.ProductService;
 import io.swagger.annotations.ApiOperation;
@@ -45,8 +49,8 @@ public class CustomerController {
 
     @ApiOperation("To add a new customer")
     @PostMapping
-    private ResponseEntity<Customer> addCustomer(@RequestBody Customer customer) {
-        return ResponseEntity.ok(customerService.addCustomer(customer));
+    private ResponseEntity<Customer> addCustomer(@RequestBody CustomerDto customerDto) {
+        return ResponseEntity.ok(customerService.addCustomer(CustomerMapper.fromCustomerDto(customerDto)));
     }
 
     @ApiOperation("To delete a customer by ID")
@@ -58,14 +62,22 @@ public class CustomerController {
 
     @ApiOperation("To edit some fields of customer by ID")
     @PatchMapping("/{customerId}")
-    private ResponseEntity<Customer> editCustomer(@PathVariable UUID customerId, @RequestBody Customer customer) {
-        return ResponseEntity.ok(customerService.editCustomer(customerId, customer));
+    private ResponseEntity<Customer> editCustomer(@PathVariable UUID customerId,
+                                                  @RequestBody CustomerDto customerDto) {
+        return ResponseEntity.ok(customerService.editCustomer(
+                customerId, CustomerMapper.fromCustomerDto(customerDto)
+                )
+        );
     }
 
     @ApiOperation("To update a customer by ID")
     @PutMapping("/{customerId}")
-    private ResponseEntity<Customer> updateCustomer(@PathVariable UUID customerId,  @RequestBody Customer customer) {
-        return ResponseEntity.ok(customerService.updateCustomer(customerId, customer));
+    private ResponseEntity<Customer> updateCustomer(@PathVariable UUID customerId,
+                                                    @RequestBody CustomerDto customerDto) {
+        return ResponseEntity.ok(customerService.updateCustomer(
+                customerId, CustomerMapper.fromCustomerDto(customerDto)
+                )
+        );
     }
 
 
@@ -79,7 +91,11 @@ public class CustomerController {
 
     @ApiOperation("To create a new product for customer")
     @PostMapping("/{customerId}/products")
-    private ResponseEntity<Product> addProductToCustomer(@PathVariable UUID customerId, @Valid @RequestBody Product product) {
-        return ResponseEntity.ok(productService.addProductByCustomerId(customerId, product));
+    private ResponseEntity<Product> addProductToCustomer(@PathVariable UUID customerId,
+                                                         @Valid @RequestBody ProductDto productDto) {
+        return ResponseEntity.ok(productService.addProductByCustomerId(
+                customerId, ProductMapper.fromProductDto(productDto)
+                )
+        );
     }
 }

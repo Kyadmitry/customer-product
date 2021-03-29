@@ -1,6 +1,9 @@
 package app.smart.test_project.mapper;
 
+import app.smart.test_project.model.Customer;
 import app.smart.test_project.model.Product;
+import app.smart.test_project.model.dto.CustomerDto;
+import app.smart.test_project.model.dto.ProductDto;
 
 public class ProductMapper {
 
@@ -41,6 +44,14 @@ public class ProductMapper {
                 .isDeleted(currentProduct.getIsDeleted())
                 .price(newProduct.getPrice())
                 .title(newProduct.getTitle())
+                .build();
+    }
+
+    public static Product fromProductDto(ProductDto productDto) {
+        return Product.builder()
+                .price(productDto.getPrice())
+                .description(productDto.getDescription())
+                .title(productDto.getTitle())
                 .build();
     }
 }

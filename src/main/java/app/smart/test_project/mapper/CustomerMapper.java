@@ -1,6 +1,7 @@
 package app.smart.test_project.mapper;
 
 import app.smart.test_project.model.Customer;
+import app.smart.test_project.model.dto.CustomerDto;
 
 public class CustomerMapper {
 
@@ -35,6 +36,12 @@ public class CustomerMapper {
                 .createdAt(currentCustomer.getCreatedAt())
                 .isDeleted(currentCustomer.getIsDeleted())
                 .title(newCustomer.getTitle())
+                .build();
+    }
+
+    public static Customer fromCustomerDto(CustomerDto customerDto) {
+        return Customer.builder()
+                .title(customerDto.getTitle())
                 .build();
     }
 }

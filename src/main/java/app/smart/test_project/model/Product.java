@@ -22,13 +22,13 @@ public class Product {
     @JoinColumn(name = "customer_id")
     private Customer customerId;
 
-    @NotNull(message = "title field must not be null")
+    @Column(nullable = false)
     private String title;
 
     @Column(length = 1024)
     private String description;
 
-    @NotNull(message = "price field must not be null")
+    @Column(nullable = false)
     private BigDecimal price;
 
     @Column(nullable = false)
