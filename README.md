@@ -1,8 +1,23 @@
-# customer-product
-CRUD service with Postgres
+## customer-product
+It is a CRUD service with Postgres
 
-1) Download the project
-2) Run the command: docker-compose up
+# Technologies used:
+* JDK 8+
+* Spring Boot 2
+* Spring Security
+* Gradle 6.7.1
+* Hibernate
+* Docker-compose
+* JUnit/Mockito
+* Swagger
+* Postgresql
+
+# Required software:
+* Docker
+
+# How to run the application:
+1. Download the project
+2. Run the command: docker-compose up
 
 There is Spring Security, so you have to sign up and login.
 There is a simple role model: simple user (with USER role) can login and then he can see page with his firstname, lastname and buttom 'Exit'.
