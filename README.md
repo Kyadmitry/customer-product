@@ -1,7 +1,7 @@
-## customer-product
+# customer-product
 It is a CRUD service with Postgres
 
-# Technologies used:
+### Technologies used:
 * JDK 8+
 * Spring Boot 2
 * Spring Security
@@ -12,10 +12,10 @@ It is a CRUD service with Postgres
 * Swagger
 * Postgresql
 
-# Required software:
+### Required software:
 * Docker
 
-# How to run the application:
+### How to run the application:
 1. Download the project
 2. Run the command: docker-compose up
 
