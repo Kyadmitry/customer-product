@@ -32,22 +32,31 @@ To get the ADMIN role, you must enter "admin" in the "Login" field. Otherwise, t
 <code>curl -X GET "http://localhost:8080/api/v1/customers" -H "accept: */*"</code>
   
 - To get a customer by ID:
-```curl -X GET "http://localhost:8080/api/v1/customers/{customerId}" -H "accept: */*"```
+<code>curl -X GET "http://localhost:8080/api/v1/customers/{customerId}" -H "accept: */*"</code>
+
 - To update a customer by ID:
-```curl -X PUT "http://localhost:8080/api/v1/customers/{customerId}" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"title\": \"newTitle\"}"```
+<code>curl -X PUT "http://localhost:8080/api/v1/customers/{customerId}" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"title\": \"newTitle\"}"</code>
+  
 - To delete a customer by ID:
-```curl -X DELETE "http://localhost:8080/api/v1/customers/{customerId}" -H "accept: */*"```
+<code>curl -X DELETE "http://localhost:8080/api/v1/customers/{customerId}" -H "accept: */*"</code>
+
 - To edit a customer by ID:
-```curl -X PATCH "http://localhost:8080/api/v1/customers/{customerId}" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"title\": \"newTitle\"}"```
+<code>curl -X PATCH "http://localhost:8080/api/v1/customers/{customerId}" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"title\": \"newTitle\"}"</code>
+  
 - To create a new product for a customer:
-```curl -X POST "http://localhost:8080/api/v1/customers/{customerId}" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"description\": \"string\", \"price\": 14, \"title\": \"string\"}"```
+<code>curl -X POST "http://localhost:8080/api/v1/customers/{customerId}" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"description\": \"string\", \"price\": 14, \"title\": \"string\"}"</code>
+
 - To get customer products:
-```curl -X GET "http://localhost:8080/api/v1/customers/59b82738-3112-45d1-85ed-28d181436a1f/products" -H "accept: */*"```
+<code>curl -X GET "http://localhost:8080/api/v1/customers/59b82738-3112-45d1-85ed-28d181436a1f/products" -H "accept: */*"</code>
+
 - To get a product by ID:
-```curl -X GET "http://localhost:8080/api/v1/products/{productId}" -H "accept: */*"```
+<code>curl -X GET "http://localhost:8080/api/v1/products/{productId}" -H "accept: */*"</code>
+  
 - To update a customer by ID:
-```curl -X PUT "http://localhost:8080/api/v1/products/{productId}" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"description\": \"NewString\" \"price\": 98, \"title\": \"string\"}"```
+<code>curl -X PUT "http://localhost:8080/api/v1/products/{productId}" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"description\": \"NewString\" \"price\": 98, \"title\": \"string\"}"</code>
+
 - To edit a product by ID:
-```curl -X PATCH "http://localhost:8080/api/v1/products/{productId}" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"description\": \"EditedString\"}"```
+<code>curl -X PATCH "http://localhost:8080/api/v1/products/{productId}" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"description\": \"EditedString\"}"</code>
+  
 - To delete a product by ID:
-```curl -X DELETE "http://localhost:8080/api/v1/products/{productId}" -H "accept: */*"```
+<code>curl -X DELETE "http://localhost:8080/api/v1/products/{productId}" -H "accept: */*"</code>
