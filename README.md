@@ -1,7 +1,7 @@
 # customer-product
 It is a CRUD service with Postgres
 
-### Technologies used:
+### Technologies used
 * Spring Boot 2
 * Spring Security
 * Hibernate
@@ -11,10 +11,10 @@ It is a CRUD service with Postgres
 * Postgresql
 * H2
 
-### Required software:
+### Required software
 * Docker
 
-### How to run the application:
+### How to run the application
 1. Download the project
 2. Run the command: ```docker-compose up --build```
 
@@ -24,11 +24,13 @@ the Exit button and the "Swagger (only for admin)" button inaccessible to him.
 A user with the ADMIN role can see the same page, but he has access to the application's Swagger using the "Swagger (administrator only)" button.
 To get the ADMIN role, you must enter "admin" in the "Login" field. Otherwise, the USER role is created.
 
-### How to test the application:
+### How to test the application
 - To create a customer:
-  ```curl -X POST "http://localhost:8080/api/v1/customers" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"title\": \"someTitle\"}"```
+  <code>curl -X POST "http://localhost:8080/api/v1/customers" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"title\": \"someTitle\"}"<code>
+  
 - To get customers:
-```curl -X GET "http://localhost:8080/api/v1/customers" -H "accept: */*"``` 
+<code>curl -X GET "http://localhost:8080/api/v1/customers" -H "accept: */*"<code>
+  
 - To get a customer by ID:
 ```curl -X GET "http://localhost:8080/api/v1/customers/{customerId}" -H "accept: */*"```
 - To update a customer by ID:
