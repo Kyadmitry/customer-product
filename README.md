@@ -2,10 +2,8 @@
 It is a CRUD service with Postgres
 
 ### Technologies used:
-* JDK 12+
 * Spring Boot 2
 * Spring Security
-* Gradle 6.7.1
 * Hibernate
 * Docker-compose
 * JUnit/Mockito
