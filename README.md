@@ -26,10 +26,10 @@ To get the ADMIN role, you must enter "admin" in the "Login" field. Otherwise, t
 
 ### How to test the application
 - To create a customer:
-  <code>curl -X POST "http://localhost:8080/api/v1/customers" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"title\": \"someTitle\"}"<code>
+  <code>curl -X POST "http://localhost:8080/api/v1/customers" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"title\": \"someTitle\"}"</code>
   
 - To get customers:
-<code>curl -X GET "http://localhost:8080/api/v1/customers" -H "accept: */*"<code>
+<code>curl -X GET "http://localhost:8080/api/v1/customers" -H "accept: */*"</code>
   
 - To get a customer by ID:
 ```curl -X GET "http://localhost:8080/api/v1/customers/{customerId}" -H "accept: */*"```
