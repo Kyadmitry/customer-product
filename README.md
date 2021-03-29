@@ -21,8 +21,9 @@ It is a CRUD service with Postgres
 2. Run the command: docker-compose up
 
 There is Spring Security, so you have to sign up and login.
-There is a simple role model: simple user (with USER role) can login and then he can see page with his firstname, lastname and buttom 'Exit'.
-User with ADMIN role can see the same page and he can see Swagger of application.
+There is a simple role model: simple user (with USER role) can login and then he can see page with his firstname, lastname, 
+buttom 'Exit' and the "Swagger (only for admin)" button inaccessible to him.
+User with ADMIN role can see the same page and he can see Swagger of application by "Swagger (only for admin)" button.
 You have to put 'admin' into login input for getting ADMIN role. A USER role is created in other cases.
 
 
