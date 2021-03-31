@@ -16,7 +16,7 @@ It is a CRUD service with Postgres
 
 ### How to run the application
 1. Download the project
-2. Run the command: ```docker-compose up --build```
+2. Run the command: ```docker-compose up```
 
 This application uses Spring Security, so you need to register and log in.
 There is a simple role model: a simple user (with the USER role), when entering the system, can see a page with his first name, last name,
